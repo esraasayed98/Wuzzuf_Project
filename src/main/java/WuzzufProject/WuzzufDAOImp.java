@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import smile.data.Tuple;
 import smile.data.vector.IntVector;
 import smile.io.Read;
+import tech.tablesaw.api.Table;
 
 
 public class WuzzufDAOImp {
@@ -63,14 +64,22 @@ public class WuzzufDAOImp {
                 ", Number of rows after removing null values= " +String.valueOf( Data.nrows()) ;
     }
 
-    public String RemoveDuplicates()
+    public long RemoveDuplicates()
     {
 
 
 
-        Set<Tuple> s =Data.stream().collect(Collectors.toSet());
 
-        return  "count of rows after removing duplicates  "+ String.valueOf( s.stream().count());
+        try {
+            Table t = Table.read().file("src/main/resources/Wuzzuf_Jobs.csv");
+            t= t.dropDuplicateRows() ;
+            return t.stream().count() ;
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return 0;
+
 
     }
 

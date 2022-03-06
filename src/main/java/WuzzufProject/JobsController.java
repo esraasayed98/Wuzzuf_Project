@@ -43,7 +43,7 @@ public class JobsController {
     @GetMapping("/Duplicates")
     public String Duplicates()
     {
-        return DAO.RemoveDuplicates();
+        return "count of rows after removing duplicates= " + String.valueOf(DAO.RemoveDuplicates());
     }
 
     @GetMapping("/count")
