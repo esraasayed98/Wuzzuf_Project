@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wuzzuf Data</title>
+    <style>
+	.button {
+	  border: none;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 16px;
+	  margin: 4px 2px;
+	  width: 50%;
+	  cursor: pointer;
+	  background-color: #008CBA;
+	}
+
+	.button:hover {
+  background-color: #607293;
+}
+</style>
+</head>
+<body>
+
+<h1 center=> Wuzzuf Data </h1>
+<div>
+    <a href="http://localhost:8080/read" target="_parent"><button class="button">Read  Wuzzuf Data</button></a>
+    <a href="http://localhost:8080/schema" target="_parent"><button class="button">Structure of Wuzzuf Data</button></a>
+    <a href="http://localhost:8080/clean" target="_parent"><button class="button">Remove nulls from Wuzzuf Data</button></a>
+    <a href="http://localhost:8080/Duplicates" target="_parent"><button class="button">Remove Duplicates from Wuzzuf Data</button></a>
+    <a href="http://localhost:8080/count?col=Company" target="_parent"><button class="button"> Most demanding companies for jobs</button></a>
+    <a href="http://localhost:8080/count?col=Title" target="_parent"><button class="button"> Most popular job titles</button></a>
+    <a href="http://localhost:8080/count?col=Location" target="_parent"><button class="button">Most popular areas</button></a>
+    <a href="http://localhost:8080/pie" target="_parent"><button class="button">Pie chart for jobs for each company </button></a>
+    <a href="http://localhost:8080/barTitle" target="_parent"><button class="button">Bar chart for Most popular job titles </button></a>
+    <a href="http://localhost:8080/barArea" target="_parent"><button class="button">Bar chart for Most popular areas</button></a>
+    <a href="http://localhost:8080/skill" target="_parent"><button class="button">Most important skills </button></a>
+    <a href="http://localhost:8080/factorize" target="_parent"><button class="button">Factorize YearsExp feature  </button></a>
+    <a href="http://localhost:8080/summary" target="_parent"><button class="button"> Summary of Wuzzuf Data</button></a>
+
+
+</div>
+</body>
+</html>
