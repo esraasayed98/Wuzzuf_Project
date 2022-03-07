@@ -1,7 +1,6 @@
 package WuzzufProject;
 
 
-//import joinery.DataFrame;
 import org.knowm.xchart.*;
 import org.knowm.xchart.style.Styler;
 import smile.data.DataFrame;
@@ -11,7 +10,6 @@ import java.net.URISyntaxException;
 import java.util.*;
 import java.util.stream.Collectors;
 
-import smile.data.Tuple;
 import smile.data.vector.IntVector;
 import smile.io.Read;
 import tech.tablesaw.api.Table;
@@ -50,7 +48,6 @@ public class WuzzufDAOImp {
     public String Summary()
     {
 
-
        return Data.summary().toString();
     }
 
@@ -66,8 +63,6 @@ public class WuzzufDAOImp {
 
     public long RemoveDuplicates()
     {
-
-
 
 
         try {
@@ -171,6 +166,7 @@ public class WuzzufDAOImp {
 
       return TopSkills.descendingMap();
     }
+
     public String Factorize ()
     {
 
